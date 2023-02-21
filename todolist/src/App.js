@@ -1,5 +1,5 @@
 import "./App.css"
-import TaskItem from "./Components/TaskItem";
+import TaskItem from "./Components/TaskItem/TaskItem";
 
 
 const App = () => {
