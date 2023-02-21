@@ -4,13 +4,17 @@ import TaskItem from "./Components/TaskItem";
 
 const App = () => {
 
-
+  const data = {
+    date: new Date(2023, 0 ,10),
+    task:'Walk Grandma',
+    priority:'low'
+  }
 
 
   return(
     <div className="App">
-      <TaskItem></TaskItem>
-      <TaskItem></TaskItem>
+      <TaskItem taskData={data}></TaskItem>
+      <TaskItem taskData={data}></TaskItem>
     </div>
       
  
