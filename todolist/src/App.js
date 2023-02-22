@@ -1,10 +1,11 @@
 import "./App.css"
 import TaskItem from "./Components/TaskItem/TaskItem";
+import Tasks from "./Components/Tasks/Tasks";
 
 
 const App = () => {
 
-  const data = {
+  const DUMMY_INFO = {
     date: new Date(2023, 0 ,10),
     task:'Walk Grandma',
     priority:'low'
@@ -13,8 +14,7 @@ const App = () => {
 
   return(
     <div className="App">
-      <TaskItem taskData={data}></TaskItem>
-      <TaskItem taskData={data}></TaskItem>
+      <Tasks data={DUMMY_INFO}></Tasks>
     </div>
       
  
