@@ -1,3 +1,4 @@
+import './TaskDate.css'
 
 const TaskDate = (props) => {
 
@@ -7,7 +8,7 @@ const TaskDate = (props) => {
 
 
     return(
-        <div>
+        <div className={"ToDoDate"}>
             <div>{month}</div>
             <div>{day}</div>
             <div>{year}</div>

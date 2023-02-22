@@ -6,7 +6,7 @@ import './Tasks.css'
 const Tasks = (props) => {
 
     return(
-        <Card>
+        <Card className="box">
             <TaskItem taskData={props.data}></TaskItem>
             <TaskItem taskData={props.data}></TaskItem>
         </Card>

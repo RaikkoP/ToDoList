@@ -40,9 +40,8 @@
 .box {
   border-radius: 5%;
   box-shadow: 2px 2px 15px 1px grey;
- 
   margin-top: 40px;
-  margin-left: 20%;
-  margin-right: 20%;
+  margin-left: 10%;
+  margin-right: 10%;
   padding: 3rem;
 }
