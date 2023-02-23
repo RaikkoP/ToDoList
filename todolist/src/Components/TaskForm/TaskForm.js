@@ -35,20 +35,36 @@ const TaskForm = (props) => {
         })
     }
 
+    const submitHandler = (event) => {
+        event.preventDefault();
+        const TaskData = {
+          task: userInput.enteredTask,
+          date: new Date(userInput.enteredDate),
+          priority: userInput.enteredPriority
+        };
+        console.log(TaskData);
+        setUserInput({
+          enteredTask: '',
+          enteredDate: '',
+          enteredPriority: '0'
+        });
+      };
+      
+
     return(
-        <form className="box">
+        <form onSubmit={submitHandler} className="box">
             <div>
                 <div>
                     <label>Task</label>
-                    <input type="text" onChange={taskChangeHandler}></input>
+                    <input type="text" value={userInput.enteredTask} onChange={taskChangeHandler}></input>
                 </div>
                 <div>
                     <label>Date</label>
-                    <input type="date" onChange={dateChangeHandler} min="2023-01-01" max="2025-12-31"></input>
+                    <input type="date" value={userInput.enteredDate} onChange={dateChangeHandler} min="2023-01-01" max="2025-12-31"></input>
                 </div>
                 <div>
                     <label>Priority</label>
-                    <select onChange={priorityChangeHandler}>
+                    <select value={userInput.enteredPriority} onChange={priorityChangeHandler}>
                         <option value= '0'>Low</option>
                         <option value= '1'>Medium</option>
                         <option value= '2'>High</option>
