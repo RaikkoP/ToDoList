@@ -1,14 +1,20 @@
 import Card from '../Card/Card'
+import TaskFilter from '../TaskFilter/TaskFilter'
 import TaskItem from '../TaskItem/TaskItem'
 import './Tasks.css'
 
 
 const Tasks = (props) => {
 
+    const filterer = (filter) => {
+        console.log(filter)
+    }
+
     return(
         <Card className="box">
-            <TaskItem taskData={props.data}></TaskItem>
-            <TaskItem taskData={props.data}></TaskItem>
+            <TaskFilter filterData={filterer}></TaskFilter>
+            <TaskItem taskData={props.data[0]}></TaskItem>
+            <TaskItem taskData={props.data[1]}></TaskItem>
         </Card>
     )
 }

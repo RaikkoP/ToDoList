@@ -6,12 +6,17 @@ import Tasks from "./Components/Tasks/Tasks";
 
 const App = () => {
 
-  const DUMMY_INFO = {
+  const DUMMY_INFO = [{
     date: new Date(2023, 0 ,10),
     task:'Walk Grandma',
     priority:'low'
+  },
+  {
+    date: new Date(2024, 0, 10),
+    task: 'Walk Grandpa',
+    priority:'low'
   }
-
+]
   const taskDataPrinter = (TASKDATA) => {
     console.log('In App.js')
     console.log(TASKDATA)
@@ -27,6 +32,9 @@ const App = () => {
  
   )
   
-}
+  }
+    
+
+ 
 
 export default App;
