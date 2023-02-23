@@ -1,5 +1,4 @@
 import "./App.css"
-import TaskItem from "./Components/TaskItem/TaskItem";
 import Tasks from "./Components/Tasks/Tasks";
 
 

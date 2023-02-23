@@ -1,18 +1,22 @@
 import TaskDate from '../TaskDate/TaskDate'
+import Card from '../Card/Card.js'
 import './TaskItem.css'
 
 const TaskItem = (props) => {
 
+    const clickHandler = () => {
+        console.log('Clicked')
+    }
 
     return (
-        <div className="todo-item">
+        <Card className="todo-item">
             <TaskDate  taskData={props.taskData}/>
             <div className="todo-item__description">
                 <h2>{props.taskData.task}</h2>
                 <div className="todo-item__priority">{props.taskData.priority}</div>
-                <button type="button">X</button>
             </div>
-        </div>
+            <button onClick={clickHandler}>X</button>
+        </Card>
     )
 }
 
