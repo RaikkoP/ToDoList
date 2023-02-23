@@ -5,7 +5,6 @@ import React, { useState } from 'react';
 
 const TaskItem = (props) => {
 
-    const [priority, setPriority] = useState(props.taskData.priority)
 
     const clickHandler = () => {
        

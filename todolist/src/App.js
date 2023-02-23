@@ -12,10 +12,15 @@ const App = () => {
     priority:'low'
   }
 
+  const taskDataPrinter = (TASKDATA) => {
+    console.log('In App.js')
+    console.log(TASKDATA)
+  }
+
 
   return(
     <div className="box">
-      <NewTask></NewTask>
+      <NewTask taskData={taskDataPrinter}></NewTask>
       <Tasks data={DUMMY_INFO}></Tasks>
     </div>
       

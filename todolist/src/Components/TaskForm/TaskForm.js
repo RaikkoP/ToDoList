@@ -42,7 +42,7 @@ const TaskForm = (props) => {
           date: new Date(userInput.enteredDate),
           priority: userInput.enteredPriority
         };
-        console.log(TaskData);
+        props.onSaveTaskData(TaskData)
         setUserInput({
           enteredTask: '',
           enteredDate: '',
