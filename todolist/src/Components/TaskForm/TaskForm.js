@@ -8,7 +8,7 @@ const TaskForm = (props) => {
         enteredDate: '',
         enteredPriority: ''
     })
-    console.log(userInput)
+
 
     //const [task, setTask] = useState('')
     //const [date, setDate] = useState('')

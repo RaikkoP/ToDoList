@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css"
 import NewTask from "./Components/NewTask/NewTask";
 import Tasks from "./Components/Tasks/Tasks";
@@ -5,6 +6,8 @@ import Tasks from "./Components/Tasks/Tasks";
 
 
 const App = () => {
+
+  const [filterPriority, setFilterPriority] = useState('3')
 
   const DUMMY_INFO = [{
     date: new Date(2023, 0 ,10),
@@ -22,11 +25,18 @@ const App = () => {
     console.log(TASKDATA)
   }
 
+  const filterDataPrinter = (FILTERDATA) => {
+    setFilterPriority(FILTERDATA)
+    console.log(filterPriority)
+  }
+
+  
+
 
   return(
     <div className="box">
       <NewTask taskData={taskDataPrinter}></NewTask>
-      <Tasks data={DUMMY_INFO}></Tasks>
+      <Tasks data={DUMMY_INFO} filterData={filterDataPrinter}></Tasks>
     </div>
       
  

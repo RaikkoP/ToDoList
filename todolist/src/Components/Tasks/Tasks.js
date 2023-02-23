@@ -7,14 +7,17 @@ import './Tasks.css'
 const Tasks = (props) => {
 
     const filterer = (filter) => {
-        console.log(filter)
+        props.filterData(filter)
     }
 
     return(
         <Card className="box">
             <TaskFilter filterData={filterer}></TaskFilter>
-            <TaskItem taskData={props.data[0]}></TaskItem>
-            <TaskItem taskData={props.data[1]}></TaskItem>
+            {props.data.map((data) => {
+                return <TaskItem
+                taskData={data}>
+                </TaskItem>
+            })}
         </Card>
     )
 }
