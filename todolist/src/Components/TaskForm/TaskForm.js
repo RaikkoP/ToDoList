@@ -3,23 +3,36 @@ import "./TaskForm.css"
 
 const TaskForm = (props) => {
 
-    const [task, setTask] = useState('')
-    const [date, setDate] = useState('')
-    const [priority, setPriority] = useState('')
+    const [userInput, setUserInput] = useState({
+        enteredTask: '',
+        enteredDate: '',
+        enteredPriority: ''
+    })
+    console.log(userInput)
+
+    //const [task, setTask] = useState('')
+    //const [date, setDate] = useState('')
+    //const [priority, setPriority] = useState('')
 
     const taskChangeHandler = (event) => {
-        setTask(event.target.value)
-        console.log(event.target.value)
+        setUserInput({
+            ...userInput,
+            enteredTask: event.target.value
+        })
     }
 
     const dateChangeHandler = (event) => {
-        setDate(event.target.value)
-        console.log(event.target.value)
+        setUserInput({
+            ...userInput,
+            enteredDate: event.target.value
+        })
     }
 
     const priorityChangeHandler = (event) => {
-        setPriority(event.target.value)
-        console.log(event.target.value)
+        setUserInput({
+            ...userInput,
+            enteredPriority: event.target.value
+        })
     }
 
     return(
