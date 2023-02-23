@@ -1,11 +1,14 @@
 import TaskDate from '../TaskDate/TaskDate'
 import Card from '../Card/Card.js'
 import './TaskItem.css'
+import React, { useState } from 'react';
 
 const TaskItem = (props) => {
 
+    const [priority, setPriority] = useState(props.taskData.priority)
+
     const clickHandler = () => {
-        console.log('Clicked')
+       
     }
 
     return (

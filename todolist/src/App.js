@@ -1,5 +1,7 @@
 import "./App.css"
+import NewTask from "./Components/NewTask/NewTask";
 import Tasks from "./Components/Tasks/Tasks";
+
 
 
 const App = () => {
@@ -12,7 +14,8 @@ const App = () => {
 
 
   return(
-    <div className="App">
+    <div className="box">
+      <NewTask></NewTask>
       <Tasks data={DUMMY_INFO}></Tasks>
     </div>
       
