@@ -2,9 +2,9 @@ import './TaskDate.css'
 
 const TaskDate = (props) => {
 
-    const day = props.taskData.date.toLocaleString('en-US', {day: '2-digit'})
-    const month = props.taskData.date.toLocaleString('en-US', {month: 'long'})
-    const year = props.taskData.date.getFullYear()
+    const day = props.taskData.toLocaleString('en-US', {day: '2-digit'})
+    const month = props.taskData.toLocaleString('en-US', {month: 'long'})
+    const year = props.taskData.getFullYear()
 
 
     return(

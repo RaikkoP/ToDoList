@@ -11,10 +11,10 @@ const TaskItem = (props) => {
 
     return (
         <Card className="todo-item">
-            <TaskDate  taskData={props.taskData}/>
+            <TaskDate  taskData={props.date}/>
             <div className="todo-item__description">
-                <h2>{props.taskData.task}</h2>
-                <div className="todo-item__priority">{props.taskData.priority}</div>
+                <h2>{props.task}</h2>
+                <div className="todo-item__priority">{props.priority}</div>
             </div>
             <button onClick={clickHandler}>X</button>
         </Card>
