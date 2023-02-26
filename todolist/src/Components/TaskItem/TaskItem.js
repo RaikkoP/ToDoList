@@ -6,8 +6,9 @@ const TaskItem = (props) => {
 
 
     const clickHandler = () => {
-       
+        props.onDeleteTask(props.id);
     }
+    
 
     return (
         <Card className="todo-item">

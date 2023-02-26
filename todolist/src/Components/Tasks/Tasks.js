@@ -15,15 +15,21 @@ const Tasks = (props) => {
         setFilteredPriority(filter)
     }
 
+    const deleteTaskHandler = (taskId) => {
+        props.onDeleteTask(taskId);
+    }
+
     return(
         <Card className="box">
             <TaskFilter filterData={filterChangeHandler}></TaskFilter>
-            {props.data.map((taskData) => {
+            {props.data
+        .filter(taskData => taskData.priority === filteredPriority || filteredPriority === 'all').map((taskData) => {
                 return <TaskItem
                 id={taskData.id}
                 task={taskData.task}
                 date={taskData.date}
                 priority={taskData.priority}
+                onDeleteTask={deleteTaskHandler}
                 ></TaskItem>
             })}
         </Card>

@@ -13,10 +13,10 @@ const TaskFilter = (props) => {
 
     return(
         <select onChange={filterHandler}>
-            <option value="3">All</option>
-            <option value="0">Low</option>
-            <option value="1">Medium</option>
-            <option value="2">High</option>
+            <option value="all">All</option>
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
         </select>
     )
 }

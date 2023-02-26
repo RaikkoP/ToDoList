@@ -25,6 +25,7 @@ const DUMMY_INFO = [{
 ]
 
 
+
 const App = () => {
 
   const [taskList, setTaskList] = useState(DUMMY_INFO)
@@ -38,6 +39,12 @@ const App = () => {
   console.log(taskList)
 }
 
+const deleteTaskHandler = (taskId) => {
+  setTaskList((previousTasks) => {
+    return previousTasks.filter(task => task.id !== taskId);
+  });
+}
+
 
   
 
@@ -45,7 +52,7 @@ const App = () => {
   return(
     <div className="box">
       <NewTask taskData={taskDataPrinter}></NewTask>
-      <Tasks data={taskList}></Tasks>
+      <Tasks data={taskList}  onDeleteTask={deleteTaskHandler}></Tasks>
     </div>
       
  
