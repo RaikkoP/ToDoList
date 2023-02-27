@@ -46,7 +46,7 @@ const TaskForm = (props) => {
         setUserInput({
           enteredTask: '',
           enteredDate: '',
-          enteredPriority: '0'
+          enteredPriority: 'low'
         });
       };
       

@@ -7,7 +7,7 @@ import './Tasks.css'
 
 const Tasks = (props) => {
 
-    const [filteredPriority, setFilteredPriority] = useState('3')
+    const [filteredPriority, setFilteredPriority] = useState('all')
 
     const filterChangeHandler = (filter) => {
         console.log('Filter change handled by Tasks.js')

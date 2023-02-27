@@ -3,7 +3,7 @@ import './TaskFilter.css'
  
 const TaskFilter = (props) => {
 
-    const [filter, setFilter] = useState('3')
+    const [filter, setFilter] = useState('all')
 
     const filterHandler = (event) => {
         setFilter(event.target.value)
