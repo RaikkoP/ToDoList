@@ -7,20 +7,20 @@ import Tasks from "./Components/Tasks/Tasks";
 const DUMMY_INFO = [{
   id: 'e1',
   date: new Date(2023, 0 ,10),
-  task:'Walk Grandma',
-  priority:'low'
+  task:'Walk Dog',
+  priority:'high'
 },
 {
   id: 'e2',
   date: new Date(2024, 0, 10),
-  task: 'Walk Grandpa',
+  task: 'Cook dinner',
   priority:'low'
 },
 {
   id: 'e3',
   date: new Date(2024, 0, 10),
-  task: 'Walk Wife',
-  priority:'low'
+  task: 'Hit the gym',
+  priority:'medium'
 }
 ]
 
